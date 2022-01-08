@@ -4,6 +4,9 @@ const todoList = [];
 function addTodo() {
     const inputTextElem = document.getElementById('input-text');
     const inputText = inputTextElem.value;
+    if (!inputText) {
+        return;
+    }
     todoList.push(inputText);
     updateTodoList();
     inputTextElem.value = '';
